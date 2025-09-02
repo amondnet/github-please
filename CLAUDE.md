@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Architecture
 
-This is a pnpm monorepo with the following structure:
+This is a Turborepo-powered pnpm monorepo with the following structure:
 - `packages/cli/` - Main CLI package using Commander.js
 - `packages/gh-extension/` - GitHub CLI extension for issue automation
 - `packages/eslint-config/` - Shared ESLint configuration
@@ -20,20 +20,20 @@ This is a pnpm monorepo with the following structure:
 # Install dependencies
 pnpm install
 
-# Build CLI package
+# Build all packages
+pnpm build
+
+# Development mode with watch (all packages)
+pnpm dev
+
+# Type checking (all packages)
+pnpm typecheck
+
+# Linting (all packages)
+pnpm lint
+
+# Package-specific commands
 cd packages/cli && pnpm build
-
-# Development mode with watch
-cd packages/cli && pnpm dev
-
-# Type checking
-cd packages/cli && pnpm typecheck
-
-# Linting
-cd packages/cli && pnpm lint
-cd packages/cli && pnpm lint:fix
-
-# Build gh extension
 cd packages/gh-extension && pnpm build
 
 # Install gh extension locally for testing

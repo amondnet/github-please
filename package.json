@@ -2,10 +2,18 @@
   "name": "github-please-repo",
   "version": "1.0.0",
   "description": "AI-powered GitHub automation tool that handles issues, labels, and releases with a simple \"please\"",
-  "main": "commitlint.config.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test"
   },
+  "devDependencies": {
+    "turbo": "^2.3.3"
+  },
+  "packageManager": "pnpm@9.15.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/amondnet/github-please.git"

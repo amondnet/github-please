@@ -1,9 +1,15 @@
 {
-  "extends": "@passionfactory/tsconfig/library.json",
+  "extends": "@github-please/tsconfig/base.json",
   "compilerOptions": {
-    "rootDir": ".",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "target": "ES2022",
     "module": "ESNext",
-    "moduleResolution": "bundler"
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
   },
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
 }
