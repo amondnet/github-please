@@ -1,0 +1,20 @@
+{
+  "name": "github-please-repo",
+  "version": "1.0.0",
+  "description": "AI-powered GitHub automation tool that handles issues, labels, and releases with a simple \"please\"",
+  "main": "commitlint.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amondnet/github-please.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amondnet/github-please/issues"
+  },
+  "homepage": "https://github.com/amondnet/github-please#readme"
+}

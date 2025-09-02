@@ -1,0 +1,9 @@
+{
+  "extends": "@passionfactory/tsconfig/library.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "module": "ESNext",
+    "moduleResolution": "bundler"
+  },
+  "exclude": ["node_modules", "dist"]
+}

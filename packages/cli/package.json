@@ -1,0 +1,37 @@
+{
+  "name": "@github-please/cli",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "AI-powered GitHub automation tool that handles issues, labels, and releases with a simple \"please\"",
+  "bin": {
+    "repo-cli": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "fs-extra": "^11.2.0",
+    "glob": "^11.0.0",
+    "ora": "^8.1.0",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@github-please/eslint-config": "workspace:*",
+    "@github-please/tsconfig": "workspace:*",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.10.5",
+    "@types/prompts": "^2.4.9",
+    "eslint": "^9.33.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.9.2"
+  }
+}

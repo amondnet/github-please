@@ -1,0 +1,33 @@
+{
+  "name": "@github-please/gh-extension",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "GitHub CLI extension for AI-powered issue responses",
+  "bin": {
+    "gh-please": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "gh-please"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "ora": "^8.1.0"
+  },
+  "devDependencies": {
+    "@github-please/eslint-config": "workspace:*",
+    "@github-please/tsconfig": "workspace:*",
+    "@types/node": "^22.10.5",
+    "eslint": "^9.33.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.9.2"
+  }
+}

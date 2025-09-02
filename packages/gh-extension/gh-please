@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -e
+
+# gh extension executable wrapper for github-please
+# This script is called by gh when running: gh please
+
+# Get the directory where this script is located
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Check if we're in development mode (dist doesn't exist)
+if [ ! -d "$SCRIPT_DIR/dist" ]; then
+  echo "Error: Extension not built. Run 'pnpm build' in the gh-extension directory first." >&2
+  exit 1
+fi
+
+# Execute the Node.js CLI with all arguments passed through
+exec node "$SCRIPT_DIR/dist/index.js" "$@"
